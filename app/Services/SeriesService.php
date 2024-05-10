@@ -55,6 +55,12 @@ class SeriesService
 
         $series = Series::findOrFail($seriesId);
 
+        $series->title = $seriesData['title'] ?? $series->title;
+        $series->description = $seriesData['description'] ?? $series->description;
+        $series->series_date = $seriesData['series_date'] ?? $series->series_date;
+        $series->author = $seriesData['author'] ?? $series->author;
+        $series->status = $seriesData['status'] ?? $series->status;
+
         if (isset($seriesData['image'])) {
             $this->updateImage($series, $seriesData['image']);
         }

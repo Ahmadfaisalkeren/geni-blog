@@ -61,7 +61,7 @@ class SeriesController extends Controller
         ], 200);
     }
 
-    public function update(SeriesUpdateRequest $request, $seriesId)
+    public function update(string $seriesId, SeriesUpdateRequest $request)
     {
         $series = $this->seriesService->updateSeries($seriesId, $request->validated());
 

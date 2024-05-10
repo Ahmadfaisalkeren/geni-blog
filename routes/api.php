@@ -28,10 +28,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('post_details/{postDetailId}', [PostDetailController::class, 'update']);
     Route::delete('post_details/{postDetailId}/', [PostDetailController::class, 'destroy']);
 
-
     Route::post('series', [SeriesController::class, 'store']);
     Route::get('series/{seriesId}', [SeriesController::class, 'edit']);
-    Route::put('series/{seriesId}', [SeriesController::class, 'update']);
+    Route::put('series/{seriesId}/update', [SeriesController::class, 'update']);
     Route::delete('series/{seriesId}', [SeriesController::class, 'destroy']);
 
     Route::post('series-part', [SeriesPartController::class, 'store']);
