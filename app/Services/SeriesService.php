@@ -59,7 +59,7 @@ class SeriesService
             $this->updateImage($series, $seriesData['image']);
         }
 
-        $series->update($seriesData);
+        $series->save();
 
         return $series;
     }
